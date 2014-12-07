@@ -1,0 +1,142 @@
+{
+    "steps": [],
+    "failures": [],
+    "skip": {
+        "plugin.akismet\/akismet.php": "skip",
+        "plugin.hello.php": "skip",
+        "plugin.jetpack\/jetpack.php": "skip",
+        "plugin.mojo-marketplace-wp-plugin\/mojo-marketplace.php": "skip",
+        "plugin.sidekick\/sidekick.php": "skip"
+    },
+    "output": {
+        "logs": [
+            "Starting up.",
+            "Starting step addWPDieHandler",
+            "Completed step addWPDieHandler.",
+            "Starting step prepareForInstallationProcess",
+            "Completed step prepareForInstallationProcess.",
+            "Starting step checkRequiredFiles",
+            "Completed step checkRequiredFiles.",
+            "Starting step checkCoreCompatibility",
+            "Completed step checkCoreCompatibility.",
+            "Starting step wp_check_mysql_version",
+            "Completed step wp_check_mysql_version.",
+            "Starting step wp_cache_flush",
+            "Completed step wp_cache_flush.",
+            "Starting step installDatabaseTables",
+            "Applied database changes: \nCreated table wp_igjl_users\nCreated table wp_igjl_usermeta\nCreated table wp_igjl_terms\nCreated table wp_igjl_term_taxonomy\nCreated table wp_igjl_term_relationships\nCreated table wp_igjl_commentmeta\nCreated table wp_igjl_comments\nCreated table wp_igjl_links\nCreated table wp_igjl_options\nCreated table wp_igjl_postmeta\nCreated table wp_igjl_posts",
+            "Completed step installDatabaseTables.",
+            "Starting step populate_options",
+            "Completed step populate_options.",
+            "Starting step populate_roles",
+            "Completed step populate_roles.",
+            "Starting step setUpSiteOptions",
+            "Completed step setUpSiteOptions.",
+            "Starting step createAdminUser",
+            "created admin user {\"userId\":1,\"update\":{\"user_pass\":\"$P$BjvC2H6q\\\/jXZO4atm9wygFlRbaVm860\"},\"userName\":\"140071\"}",
+            "Completed step createAdminUser.",
+            "Starting step installDefaults",
+            "Completed step installDefaults.",
+            "Starting step flush_rewrite_rules",
+            "Completed step flush_rewrite_rules.",
+            "Starting step wp_cache_flush",
+            "Completed step wp_cache_flush.",
+            "Starting step theme.activate",
+            "Skipping theme setup",
+            "Completed step theme.activate.",
+            "Starting step plugin.activateAll",
+            "Activating plugin akismet\/akismet.php",
+            "Activated plugin akismet\/akismet.php",
+            "Activating plugin hello.php",
+            "Activated plugin hello.php",
+            "Activating plugin jetpack\/jetpack.php",
+            "Activated plugin jetpack\/jetpack.php",
+            "Activating plugin mojo-marketplace-wp-plugin\/mojo-marketplace.php",
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Undefined index: HTTP_USER_AGENT",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/mojo-marketplace-wp-plugin\/inc\/user-experience-tracking.php",
+                    "errline": 33,
+                    "trace": "#0 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/mojo-marketplace-wp-plugin\/inc\/user-experience-tracking.php(33): MOJOOutput::error_handler(8, 'Undefined index...', '\/home2\/cafemoch...', 33, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/mojo-marketplace-wp-plugin\/inc\/user-experience-tracking.php(122): mm_ux_log(Array)\n#2 [internal function]: mm_ux_log_activated(false)\n#3 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-includes\/plugin.php(505): call_user_func_array('mm_ux_log_activ...', Array)\n#4 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(575): do_action('activate_mojo-m...', false)\n#5 [internal function]: activate_plugin('mojo-marketplac...', NULL)\n#6 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#7 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('mojo-marketplac...', NULL)\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#13 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#14 {main}"
+                }
+            },
+            "Activated plugin mojo-marketplace-wp-plugin\/mojo-marketplace.php",
+            "Activating plugin sidekick\/sidekick.php",
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Undefined index: HTTP_X_FORWARDED_PROTO",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php",
+                    "errline": 58,
+                    "trace": "#0 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(58): MOJOOutput::error_handler(8, 'Undefined index...', '\/home2\/cafemoch...', 58, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(36): Sidekick->protocol()\n#2 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(442): Sidekick->__construct()\n#3 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(542): include_once('\/home2\/cafemoch...')\n#4 [internal function]: activate_plugin('sidekick\/sideki...', NULL)\n#5 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#6 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#7 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('sidekick\/sideki...', NULL)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#13 {main}"
+                }
+            },
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Undefined index: HTTP_X_FORWARDED_PROTO",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php",
+                    "errline": 58,
+                    "trace": "#0 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(58): MOJOOutput::error_handler(8, 'Undefined index...', '\/home2\/cafemoch...', 58, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(350): Sidekick->protocol()\n#2 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(37): Sidekick->check_versions()\n#3 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(442): Sidekick->__construct()\n#4 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(542): include_once('\/home2\/cafemoch...')\n#5 [internal function]: activate_plugin('sidekick\/sideki...', NULL)\n#6 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#7 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('sidekick\/sideki...', NULL)\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#13 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#14 {main}"
+                }
+            },
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Constant SK_DOMAIN_USED already defined",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php",
+                    "errline": 63,
+                    "trace": "#0 [internal function]: MOJOOutput::error_handler(8, 'Constant SK_DOM...', '\/home2\/cafemoch...', 63, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(63): define('SK_DOMAIN_USED', 'http:\/\/pullvod....')\n#2 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(350): Sidekick->protocol()\n#3 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(37): Sidekick->check_versions()\n#4 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(442): Sidekick->__construct()\n#5 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(542): include_once('\/home2\/cafemoch...')\n#6 [internal function]: activate_plugin('sidekick\/sideki...', NULL)\n#7 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('sidekick\/sideki...', NULL)\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#13 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#14 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#15 {main}"
+                }
+            },
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Constant SK_LIBRARY_DOMAIN_USED already defined",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php",
+                    "errline": 64,
+                    "trace": "#0 [internal function]: MOJOOutput::error_handler(8, 'Constant SK_LIB...', '\/home2\/cafemoch...', 64, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(64): define('SK_LIBRARY_DOMA...', 'http:\/\/library....')\n#2 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(350): Sidekick->protocol()\n#3 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(37): Sidekick->check_versions()\n#4 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(442): Sidekick->__construct()\n#5 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(542): include_once('\/home2\/cafemoch...')\n#6 [internal function]: activate_plugin('sidekick\/sideki...', NULL)\n#7 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('sidekick\/sideki...', NULL)\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#13 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#14 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#15 {main}"
+                }
+            },
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Undefined index: HTTP_X_FORWARDED_PROTO",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php",
+                    "errline": 58,
+                    "trace": "#0 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(58): MOJOOutput::error_handler(8, 'Undefined index...', '\/home2\/cafemoch...', 58, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(296): Sidekick->protocol()\n#2 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(346): Sidekick->track(Array)\n#3 [internal function]: Sidekick->activate_plugin(false)\n#4 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-includes\/plugin.php(505): call_user_func_array(Array, Array)\n#5 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(575): do_action('activate_sideki...', false)\n#6 [internal function]: activate_plugin('sidekick\/sideki...', NULL)\n#7 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('sidekick\/sideki...', NULL)\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#13 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#14 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#15 {main}"
+                }
+            },
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Constant SK_DOMAIN_USED already defined",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php",
+                    "errline": 63,
+                    "trace": "#0 [internal function]: MOJOOutput::error_handler(8, 'Constant SK_DOM...', '\/home2\/cafemoch...', 63, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(63): define('SK_DOMAIN_USED', 'http:\/\/pullvod....')\n#2 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(296): Sidekick->protocol()\n#3 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(346): Sidekick->track(Array)\n#4 [internal function]: Sidekick->activate_plugin(false)\n#5 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-includes\/plugin.php(505): call_user_func_array(Array, Array)\n#6 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(575): do_action('activate_sideki...', false)\n#7 [internal function]: activate_plugin('sidekick\/sideki...', NULL)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('sidekick\/sideki...', NULL)\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#13 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#14 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#15 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#16 {main}"
+                }
+            },
+            {
+                "Hit an error inside step plugin.activateAll": {
+                    "errno": 8,
+                    "errstr": "Constant SK_LIBRARY_DOMAIN_USED already defined",
+                    "errfile": "\/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php",
+                    "errline": 64,
+                    "trace": "#0 [internal function]: MOJOOutput::error_handler(8, 'Constant SK_LIB...', '\/home2\/cafemoch...', 64, Array)\n#1 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(64): define('SK_LIBRARY_DOMA...', 'http:\/\/library....')\n#2 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(296): Sidekick->protocol()\n#3 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-content\/plugins\/sidekick\/sidekick.php(346): Sidekick->track(Array)\n#4 [internal function]: Sidekick->activate_plugin(false)\n#5 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-includes\/plugin.php(505): call_user_func_array(Array, Array)\n#6 \/home2\/cafemoch\/public_html\/rajatbhageria\/wp-admin\/includes\/plugin.php(575): do_action('activate_sideki...', false)\n#7 [internal function]: activate_plugin('sidekick\/sideki...', NULL)\n#8 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(130): call_user_func_array('activate_plugin', Array)\n#9 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOControlInverter->__call('mockable_activa...', Array)\n#10 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1658): MOJOWordpressPluginHandler->mockable_activate_plugin('sidekick\/sideki...', NULL)\n#11 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1215): MOJOWordpressPluginHandler->activateAll()\n#12 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1268): MOJOBaseHandler->exec('plugin.activate...')\n#13 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(864): MOJOBaseHandler->runStep()\n#14 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(838): MOJOProcess->executeSteps(Object(MOJOWordpressHandler))\n#15 \/home2\/cafemoch\/public_html\/rajatbhageria\/MOJOWordpressInstaller-bvdpv6gCvj.php(1771): MOJOProcess->execute()\n#16 {main}"
+                }
+            },
+            "Activated plugin sidekick\/sidekick.php",
+            "Completed plugin activation",
+            "Completed step plugin.activateAll.",
+            "Starting step sidekick.register",
+            "Setting sidekick option sk_firstuse",
+            "Setting sidekick option sk_do_activation_redirect",
+            "Setting sidekick option sk_track_data",
+            "Setting sidekick option sk_activated",
+            "Setting sidekick option sk_activation_id",
+            "Completed step sidekick.register."
+        ],
+        "softFailures": []
+    }
+}
